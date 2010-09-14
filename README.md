@@ -7,7 +7,7 @@ audio tags.
 
 It is written in Python and distributable under the GPL.
 
-It uses the [mutagen](http://code.google.com/p/mutagen/) "mutagen") library.
+It uses the [mutagen](http://code.google.com/p/mutagen/ "mutagen") library.
 
 Usage
 -----
@@ -21,4 +21,4 @@ Todo
 
 Author
 ------
-Nathaniel Smith [blog](http://chiptheglasses.com "(blog)")
+Nathaniel Smith [(blog)](http://chiptheglasses.com "blog")
