@@ -3,7 +3,6 @@
 # Copyright 2010 Nathaniel Smith
 
 import os
-import re
 import sys
 import json
 import time
@@ -17,14 +16,15 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 filename = os.path.abspath( sys.argv[1] )
+lower_filename = filename.lower()
 
 tags = {}
 
 try:
-    if re.search(".ogg", filename, re.I):
+    if lower_filename.endswith('.ogg'):
         audio = OggVorbis(filename)
         tags['length'] = audio.info.length
-    elif re.search(".mp3", filename, re.I):
+    elif lower_filename.endswith('.mp3'):
         audio = EasyID3(filename)
         tags['length'] = MP3(filename).info.length
     else:
